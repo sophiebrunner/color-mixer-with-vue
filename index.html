@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sophie Brunner" />
+    <meta
+      name="description"
+      content="Web app that can mix red, green and blue into any color."
+    />
+    <title>Kata - Color Mixer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header :style="{ 'background-color': colorTransparent }">
+        <div id="slider-container">
+          <label for="red">r</label>
+          <input
+            type="range"
+            step="1"
+            min="0"
+            max="255"
+            id="red"
+            v-model="red"
+          />
+          <label for="green">g</label>
+          <input
+            type="range"
+            step="1"
+            min="0"
+            max="255"
+            id="green"
+            v-model="green"
+          />
+          <label for="blue">b</label>
+          <input
+            type="range"
+            step="1"
+            min="0"
+            max="255"
+            id="blue"
+            v-model="blue"
+          />
+        </div>
+        <div class="color-container">
+          <label for="slider-container">{{ convertRgbToHex }}</label>
+          <button id="btn-rndm-clr" @click="getRandomColor">
+            Random Color
+          </button>
+        </div>
+      </header>
+      <main :style="{ '--color': color }"></main>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 20px;
+  font-family: monospace;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  background-color: var(--color);
+}
+
+header {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+#app {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+
+#slider-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.color-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+#btn-rndm-clr {
+  width: 10em;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+#btn-rndm-clr:hover {
+  color: white;
+  background-color: black;
+}
+
+#red {
+  accent-color: red;
+}
+
+#green {
+  accent-color: green;
+}
+
+#blue {
+  accent-color: blue;
+}
